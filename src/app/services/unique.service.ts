@@ -34,6 +34,7 @@ export class UniqueService {
   }
 
   readPolicies(): Observable<Policy[]>{
+    console.log(this.http.get<Policy[]>(`${this.ip}api/read.php`))
     return this.http.get<Policy[]>(`${this.ip}api/read.php`);
   }
 
